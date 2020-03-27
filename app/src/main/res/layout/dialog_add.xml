@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Title" />
+
+        <Button
+            android:id="@+id/btnYushe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="default" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDurationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration: 5 min" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnTimeMinus"
+            android:text="-"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/numTime"
+            android:max="55"/>
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnTimePlus"
+            android:text="+"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background color" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/colorPickerPanel"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Cancel"
+            android:textColor="#006856" />
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp"
+            />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Submit"
+            android:textColor="#006856" />
+    </LinearLayout>
+    
+</LinearLayout>
