@@ -11,7 +11,7 @@ Development was done by
 - Device with Android 5+
 
 ## Dependencies
-- Gradle 2.3+
+- Gradle 3.5.3+
 
 ## Download Instructions
 
