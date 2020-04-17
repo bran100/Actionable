@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/metricLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:minHeight="0dp"
+    android:minWidth="0dp">
+
+    <TextView
+        android:id="@+id/statisticsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight=".05"
+        android:text="STATISTICS"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:translationY="10sp" />
+
+    <TextView
+        android:id="@+id/totalHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".0"
+        android:text="Total"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/totalValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".02"
+        android:text="23 Minutes"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/todayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".0"
+        android:text="Today"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/todayHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".02"
+        android:text="4 Minutes"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/distrubutionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".0"
+        android:text="All Task Distribution"
+        android:textSize="18sp" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="320sp"></com.github.mikephil.charting.charts.PieChart>
+
+    <Button
+        android:id="@+id/buttonHome"
+
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:layout_weight=".03"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:onClick="onClick"
+        android:text="Home"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="#000000" />
+
+</LinearLayout>

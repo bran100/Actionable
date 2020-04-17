@@ -51,7 +51,6 @@ public class MainActivity extends Activity {
         ((ListView)findViewById(R.id.listMain)).setAdapter(mAdapter = new TimeEntryAdapter(new ArrayList<TimeEntry>()));
         mAdapter.addAll(SpUtils.getCurrent());
 
-
     }
 
     @Override
@@ -98,6 +97,26 @@ public class MainActivity extends Activity {
             }
         });
 
+        menu.add("Statistics").setIcon(R.drawable.ic_stats).setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                if(mAdapter.getCount()<1){
+                    Toast.makeText(MainActivity.this, "No activity", Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                new AlertDialog.Builder(MainActivity.this).setTitle("View Statistics").setMessage("Do you want to view your Statistics?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(new Intent(MainActivity.this,MetricActivity.class));
+                                finish();
+                            }
+                        }).setNegativeButton("No",null).create().show();
+                return true;
+            }
+            //add popup
+        });
+
         menu.add("Start").setIcon(R.drawable.ic_menu_start).setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -121,6 +140,7 @@ public class MainActivity extends Activity {
 
         return super.onCreateOptionsMenu(menu);
     }
+
 
 
 

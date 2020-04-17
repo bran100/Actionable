@@ -22,7 +22,16 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ClockActivity" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" android:launchMode="singleTask"></activity>
+        <activity android:name=".ClockActivity" android:theme="@android:style/Theme.DeviceDefault.Light" android:launchMode="singleTask">
+
+        </activity>
+
+
+
+        <activity android:name= ".MetricActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light"
+            android:launchMode="singleTask">
+        </activity>
     </application>
 
 </manifest>
